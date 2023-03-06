@@ -1,0 +1,34 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "google",
+    "prettier",
+    "prettier/prettier",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["tsconfig.json", "tsconfig.dev.json"],
+    "sourceType": "module",
+    "extraFileExtensions:": [".html", ".hbs"]
+  },
+  "ignorePatterns": [
+    "/lib/**/*", // Ignore built files.
+    "/tailwind.config.js",
+    "/postcss.config.js"
+  ],
+  "plugins": ["@typescript-eslint", "import"],
+  "rules": {
+    "import/no-unresolved": 0,
+    "require-jsdoc": 0,
+    "valid-jsdoc": 0
+  }
+}

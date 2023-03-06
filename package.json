@@ -1,0 +1,21 @@
+{
+  "name": "expo-firebase-monorepo",
+  "version": "1.0.0",
+  "description": "Boilerplate repo for Expo and Firebase/Firestore app",
+  "license": "MIT",
+  "author": "Jamie Hayman <jamie@lnhl.com.au>",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "packages/firebase/functions"
+  ],
+  "scripts": {
+    "dev": "yarn --cwd apps/mobile start",
+    "start": "yarn --cwd apps/mobile start:test",
+    "publish:expo": "yarn --cwd apps/mobile expo publish",
+    "deploy:firebase": "yarn --cwd packages/firebase deploy",
+    "watch": "yarn --cwd packages/firebase watch",
+    "lint": "eslint --debug"
+  }
+}

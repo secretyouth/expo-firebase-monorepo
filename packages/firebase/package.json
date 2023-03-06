@@ -1,0 +1,20 @@
+{
+    "name": "google-functions",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "watch": "yarn --cwd functions watch",
+        "deploy": "firebase deploy",
+        "lint": "eslint --debug"
+    },
+    "private": true,
+    "dependencies": {
+        "firebase-tools": "^11.18.0"
+    },
+    "workspaces": {
+        "packages": [
+            "functions"
+        ]
+    }
+}

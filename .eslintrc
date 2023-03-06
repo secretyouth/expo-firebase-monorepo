@@ -1,0 +1,108 @@
+{
+    "extends": [
+      "airbnb",
+      "airbnb-typescript",
+      "plugin:react/recommended",
+      "prettier",
+      "prettier/prettier",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": ["react", "react-hooks", "@typescript-eslint"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": ["./tsconfig.json", "./tsconfig.dev.json"],
+      "extraFileExtensions:": [".html"]
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
+    },
+    "ignorePatterns": [
+      "*.css",
+      "*.svg",
+      "*.d.ts",
+      "*.html",
+      "**/generated.tsx",
+      "packages/website/cypress/*"
+    ],
+    "rules": {
+      "consistent-return": "warn",
+      "arrow-body-style": "warn",
+      "class-methods-use-this": "warn",
+      "implicit-arrow-linebreak": "off",
+      "import/extensions": "off",
+      "import/no-cycle": "off",
+      "import/no-extraneous-dependencies": [
+        "warn",
+        {
+          "devDependencies": [
+            "**/stories/**/**.stories.*",
+            "**/tailwind.config.js"
+          ],
+          "peerDependencies": true
+        }
+      ],
+      "array-callback-return": "warn",
+      "import/no-relative-packages": "off",
+      "import/prefer-default-export": "off",
+      "indent": "off",
+      "jsx-a11y/anchor-is-valid": [
+        "error",
+        {
+          "components": ["Link"],
+          "specialLink": ["hrefLeft", "hrefRight"],
+          "aspects": ["invalidHref", "preferButton"]
+        }
+      ],
+      "jsx-a11y/label-has-associated-control": [
+        "error",
+        {
+          "asserts": "either"
+        }
+      ],
+      "jsx-a11y/click-events-have-key-events": "off",
+      "max-len": "off",
+      "no-shadow": "off",
+      "no-nested-ternary": "warn",
+      "no-use-before-define": "off",
+      "react/destructuring-assignment": "off",
+      "react/function-component-definition": "off",
+      "react/jsx-filename-extension": [
+        "warn",
+        {
+          "extensions": [".tsx"]
+        }
+      ],
+      "react/jsx-indent": "off",
+      "react/jsx-no-constructed-context-values": "warn",
+      "react/jsx-no-useless-fragment": "warn",
+      "react/jsx-one-expression-per-line": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/no-unstable-nested-components": [
+        "warn",
+        {
+          "allowAsProps": true
+        }
+      ],
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/require-default-props": "off",
+      "react/no-array-index-key": "warn",
+      "react/style-prop-object": "warn",
+      "import/no-mutable-exports": "off",
+      "@typescript-eslint/ban-types": "off",
+      "@typescript-eslint/default-param-last": "warn",
+      "@typescript-eslint/explicit-function-return-type": [
+        "warn",
+        {
+          "allowExpressions": true
+        }
+      ],
+      "@typescript-eslint/indent": "off",
+      "@typescript-eslint/naming-convention": "warn",
+      "@typescript-eslint/no-shadow": "warn",
+      "@typescript-eslint/no-use-before-define": ["error"]
+    }
+  }
+  
