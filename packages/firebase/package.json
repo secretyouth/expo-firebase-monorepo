@@ -8,6 +8,9 @@
         "deploy": "firebase deploy",
         "lint": "eslint --debug"
     },
+    "engines": {
+        "node": "^18.x"
+    },
     "private": true,
     "dependencies": {
         "firebase-tools": "^11.18.0"
